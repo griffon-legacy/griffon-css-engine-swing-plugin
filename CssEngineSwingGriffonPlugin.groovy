@@ -76,6 +76,16 @@ The `imagePanel` node supports the following properties
  * **regionW** - w anchor
  * **regionH** - h anchor
 
+The plugin will automatically init the CSS engine at startup, in other words, you don't have to make the following calls in your code
+
+        SwingStyle.init()
+        AruiStyle.init()
+
+You must however apply Styles to any components, like this
+
+        Style style = new Style(myCssFileUrl)
+        Style.apply(myRootComponent, style)
+
 [1]: http://code.google.com/p/java-universal-css-engine/
 '''
 }
